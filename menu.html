@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Javaliscious Menu</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <script src="menu_item_creator.js"></script>
+    <script src="add_to_cart.js"></script>
+    <script src="menu_list.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+
+    <div class="accordion master" id="menu_master">
+        <div class="card">
+            <div class="card-header" id="heading_drink">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_drink" aria-expanded="true" aria-controls="collapse_drink">
+                        <strong>
+                            Drinks
+                        </strong>
+                    </button>
+                </h2>
+            </div>
+            <div id="collapse_drink" class="collapse" aria-labelledby="heading_drink" data-parent="#menu_master">
+                <div class="card-body">
+                    <div class="accordion" id="submenu_drink">
+                        <div class="card">
+                            <script>
+                                document.getElementById("submenu_drink").innerHTML += menu_item_entry('drink');
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="heading_food">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_food" aria-expanded="true" aria-controls="collapse_food">
+                        <strong>
+                            Food
+                        </strong>
+                    </button>
+                </h2>
+            </div>
+            <div id="collapse_food" class="collapse" aria-labelledby="heading_food" data-parent="#menu_master">
+                <div class="card-body">
+                    <div class="accordion" id="submenu_food">
+                        <div class="card">
+                            <script>
+                                document.getElementById("submenu_food").innerHTML += menu_item_entry('food');
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="heading_merch">
+                <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_merch" aria-expanded="true" aria-controls="collapse_merch">
+                        <strong>
+                            Merchandise
+                        </strong>
+                    </button>
+                </h2>
+            </div>
+            <div id="collapse_merch" class="collapse" aria-labelledby="heading_merch" data-parent="#menu_master">
+                <div class="card-body">
+                    <div class="accordion" id="submenu_merch">
+                        <div class="card">
+                            <script>
+                                document.getElementById("submenu_merch").innerHTML += menu_item_entry('merch');
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart_display" id="cart_display">
+        <table class ="order_table" id="order_table">
+          <colgroup>
+            <col style="width: 50%;">
+            <col style="width: 50%;">
+          </colgroup>   
+            <tbody>
+                <tr>
+                    <td><strong>Cart</strong></td><td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <script src="order_table.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

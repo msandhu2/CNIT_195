@@ -11,98 +11,79 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <script src="menu_item_creator.js"></script>
-    <script src="add_to_cart.js"></script>
+    <script src="cart_functions.js"></script>
     <script src="menu_list.js"></script>
     <link rel="stylesheet" href="styles.css">
 
 </head>
 
 <body>
+    <div class="scrollable_menu" id="menu_master">
 
+        <h2>Drinks</h2>
 
-    <div class="accordion master" id="menu_master">
-        <div class="card">
-            <div class="card-header" id="heading_drink">
-                <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_drink" aria-expanded="true" aria-controls="collapse_drink">
-                        <strong>
-                            Drinks
-                        </strong>
-                    </button>
-                </h2>
-            </div>
-            <div id="collapse_drink" class="collapse" aria-labelledby="heading_drink" data-parent="#menu_master">
-                <div class="card-body">
-                    <div class="accordion" id="submenu_drink">
-                        <div class="card">
-                            <script>
-                                document.getElementById("submenu_drink").innerHTML += menu_item_entry('drink');
-                            </script>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header" id="heading_food">
-                <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_food" aria-expanded="true" aria-controls="collapse_food">
-                        <strong>
-                            Food
-                        </strong>
-                    </button>
-                </h2>
-            </div>
-            <div id="collapse_food" class="collapse" aria-labelledby="heading_food" data-parent="#menu_master">
-                <div class="card-body">
-                    <div class="accordion" id="submenu_food">
-                        <div class="card">
-                            <script>
-                                document.getElementById("submenu_food").innerHTML += menu_item_entry('food');
-                            </script>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-header" id="heading_merch">
-                <h2 class="mb-0">
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse_merch" aria-expanded="true" aria-controls="collapse_merch">
-                        <strong>
-                            Merchandise
-                        </strong>
-                    </button>
-                </h2>
-            </div>
-            <div id="collapse_merch" class="collapse" aria-labelledby="heading_merch" data-parent="#menu_master">
-                <div class="card-body">
-                    <div class="accordion" id="submenu_merch">
-                        <div class="card">
-                            <script>
-                                document.getElementById("submenu_merch").innerHTML += menu_item_entry('merch');
-                            </script>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <script>
+            document.getElementById("menu_master").innerHTML += menu_item_entry('drink');
+        </script>
+
+        <h2>Food</h2>
+
+        <script>
+            document.getElementById("menu_master").innerHTML += menu_item_entry('food');
+        </script>
+
+        <h2>Merchandise</h2>
+
+        <script>
+            document.getElementById("menu_master").innerHTML += menu_item_entry('merch');
+        </script>
+
+    </div>
+    <div class="cart_label" id="cart_label">
+      <h2>Order</h2>
     </div>
     <div class="cart_display" id="cart_display">
-        <table class ="order_table" id="order_table">
-          <colgroup>
-            <col style="width: 50%;">
-            <col style="width: 50%;">
-          </colgroup>   
+        
+
+        <table class="order_table" id="order_table">
+            <colgroup>
+                <col style="width: 40%;">
+                <col style="width: 60%;">
+            </colgroup>
             <tbody>
                 <tr>
-                    <td><strong>Cart</strong></td><td></td>
-                </tr>
+                    <td></td>
+                </tr>              
+                                
             </tbody>
         </table>
     </div>
+    <div class="total_display" id="total_display">
+        <table class="order_table" id="order_total">
+            <colgroup>
+                <col style="width: 50%;">
+                <col style="width: 20%;">
+            </colgroup>
+            <tbody>
+                <tr>
+                  <td style="text-align: right;">Subtotal: $</td>
+                  <td style="text-align: right;" id="order_subtotal">0.00&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                </tr>     
+                <tr>         
+                  <td style="text-align: right;">Taxes and Fees: $</td>
+                  <td style="text-align: right;" id="order_taxes_and_fees">0.00&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                  <td style="text-align: right;">Grand Total: $</td>
+                  <td style="text-align: right;" id="order_grand_total">0.00&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                </tr>                   
+            </tbody>
+        </table>
 
-
+    </div>
+    <div class="checkout_div" id="checkout_div">
+      <button class="checkout_button" type="button" onClick="submit_order()">Checkout</button>
+    </div>
 
 
     <script src="order_table.js"></script>

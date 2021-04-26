@@ -26,9 +26,10 @@ body {
 .cart_label {
 
     position: absolute;
-    top: 0;
+
     left: 70%;
     right: 0%;
+    top: 0%;
     bottom: 90%;
 
     width: 30%;
@@ -44,11 +45,13 @@ body {
 
     overflow-y: scroll;
     position: absolute;
-    top: 10%;
+
     left: 70%;
     right: 0%;
-    bottom: 15%;
 
+    top: 10%;
+    bottom: 22%;
+    
     width: 30%;
     float: left;
     padding: 10px;

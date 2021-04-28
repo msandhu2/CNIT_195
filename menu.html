@@ -7,43 +7,49 @@
     <title>Javaliscious Menu</title>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,width=device-width">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
-
-    <script src="menu_item_creator.js"></script>
-    <script src="cart_functions.js"></script>
-    <script src="menu_list.js"></script>
-    <link rel="stylesheet" href="styles.css">
-
+    <script src="js/top_nav_bar.js"></script>
+    <script src="js/menu_item_creator.js"></script>
+    <script src="js/cart_functions.js"></script>
+    <script src="js/menu_list.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style1.css">
 </head>
 
 <body>
+    <div class="menu_nav" id="menu_nav">
+        <script>
+            document.getElementById("menu_nav").innerHTML += top_nav('menu');
+        </script>
+    </div>
     <div class="scrollable_menu" id="menu_master">
-
-        <h2>Drinks</h2>
+        <h2 id='header_drinks'>Drinks</h2>
 
         <script>
             document.getElementById("menu_master").innerHTML += menu_item_entry('drink');
         </script>
 
-        <h2>Food</h2>
+        <h2 id='header_food'>Food</h2>
 
         <script>
             document.getElementById("menu_master").innerHTML += menu_item_entry('food');
         </script>
 
-        <h2>Merchandise</h2>
+        <h2 id='header_merchandise'>Merchandise</h2>
 
         <script>
             document.getElementById("menu_master").innerHTML += menu_item_entry('merch');
         </script>
 
     </div>
-    <div class="cart_label" id="cart_label">
-      <h2>Order</h2>
-    </div>
+
     <div class="cart_display" id="cart_display">
-        
+
 
         <table class="order_table" id="order_table">
             <colgroup>
@@ -52,10 +58,11 @@
             </colgroup>
             <tbody>
                 <tr>
-                    <td></td><td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
-                          
-                                
+
+
             </tbody>
         </table>
     </div>
@@ -67,27 +74,27 @@
             </colgroup>
             <tbody>
                 <tr>
-                  <td style="text-align: right;">Subtotal: $</td>
-                  <td style="text-align: right;" id="order_subtotal">0.00&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                </tr>     
-                <tr>         
-                  <td style="text-align: right;">Taxes and Fees: $</td>
-                  <td style="text-align: right;" id="order_taxes_and_fees">0.00&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                    <td style="text-align: right;">Subtotal: $</td>
+                    <td style="text-align: right;" id="order_subtotal">0.00&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 </tr>
                 <tr>
-                  <td style="text-align: right;">Grand Total: $</td>
-                  <td style="text-align: right;" id="order_grand_total">0.00&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                </tr>                   
+                    <td style="text-align: right;">Taxes and Fees: $</td>
+                    <td style="text-align: right;" id="order_taxes_and_fees">0.00&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">Grand Total: $</td>
+                    <td style="text-align: right;" id="order_grand_total">0.00&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                </tr>
             </tbody>
         </table>
 
     </div>
     <div class="checkout_div" id="checkout_div">
-      <button class="checkout_button" type="button" onClick="submit_order()">Checkout</button>
+        <button class="checkout_button" type="button" onClick="submit_order()">Checkout</button>
     </div>
 
 
-    <script src="order_table.js"></script>
+    <script src="js/order_table.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

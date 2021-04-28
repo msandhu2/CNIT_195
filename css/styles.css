@@ -9,10 +9,30 @@ body {
     flex: 1 1 auto;
 }
 
+
+
+.menu_nav {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 70%;
+    bottom: 90;
+
+    width: 70%;
+    float: left; 
+    padding: 10px;
+    
+    color: #ddc966;
+    background-color: #5e4b3c;
+
+}
+
+
 .scrollable_menu {
     overflow-y: auto;
     position: absolute;
-    top: 0;
+    top: 10%;
     left: 0;
     right: 70%;
     bottom: 0;
@@ -99,6 +119,25 @@ padding: 0pt;
 
 border-radius: 12px;
 }
+
+.menu_scroll_button {
+
+color:white;
+background-color: black;
+height: 2em;
+width: 16%;
+padding: 0pt;
+
+border-radius: 12px;
+
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
 
 .checkout_button:hover {
 

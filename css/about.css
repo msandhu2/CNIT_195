@@ -1,0 +1,53 @@
+.about{
+    display: flex;
+    align-items: center;
+    /* margin-left: auto; */
+    margin-bottom: 50px;
+    color: rgb(32, 25, 11);
+}
+.about-image{
+    margin-top: 20px;
+    width: 60%;
+    height: 90%;
+}
+.custom-caption{
+    padding: 5px 5px 2px 8px;
+    color: #676363;
+    background-color:#FFFCF8;
+    font-size: 18px;
+}
+
+.custom-caption:hover {
+     color: #5E4B3C; 
+     background-color: #d6cec3;
+     transition: all 0.3 ease;
+     text-decoration: none; 
+     cursor: pointer;  
+}
+
+.about-text h2{
+    text-align: center;
+}
+
+.team {
+    color: rgb(32, 25, 11);
+}
+
+.photo-team{
+    margin-right: 38px;
+    margin-left: 38px;
+}
+.team h2{
+    text-align: center;
+}
+
+@media (max-width: 991px){
+    .col-5{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .photo-team{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+}

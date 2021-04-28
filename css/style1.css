@@ -5,6 +5,7 @@
 body{
     color:  #676363;
     padding-top: 70px; 
+    overflow-y: hidden;
 }
 
 .my-dark{
@@ -55,6 +56,7 @@ body{
     font-size: 25px;
 }
 .max-width{
+
     max-width: 1300px;
     /* padding: 0 40px; */
     margin: auto;
@@ -70,12 +72,31 @@ body{
 
 }
 .home{
+
     display: flex;
     align-items: center;
     margin-left: auto;
     margin-bottom: 50px;
     color: rgb(32, 25, 11);
 }
+
+.scroll_page_div {
+
+
+    overflow-y: auto;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    float: left;
+    padding: 10px;
+
+}
+
+
 
 .homeImage{
     margin-top: 10px;
@@ -290,3 +311,238 @@ hr{
         margin-bottom: 10px;
     } 
 } */
+
+
+
+
+.card-horizontal {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+
+
+.menu_nav {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 70%;
+    bottom: 90;
+
+    width: 70%;
+    float: left; 
+    padding: 10px;
+    
+    color: #ddc966;
+    background-color: #5e4b3c;
+
+}
+
+
+.scrollable_menu {
+    overflow-y: auto;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 70%;
+    bottom: 0;
+
+    width: 70%;
+    float: left;
+    padding: 10px;
+
+}
+
+.cart_label {
+
+    position: absolute;
+
+    left: 70%;
+    right: 0%;
+    top: 0%;
+    bottom: 90%;
+
+    width: 30%;
+    float: left;
+    padding: 10px;
+
+    color: #ddc966;
+    background-color: #5e4b3c;
+
+}
+
+.cart_display {
+
+    overflow-y: scroll;
+    position: absolute;
+
+    left: 70%;
+    right: 0%;
+
+    top: 10%;
+    bottom: 22%;
+    
+    width: 30%;
+    float: left;
+    padding: 10px;
+
+}
+
+.total_display {
+
+    position: absolute;
+    top: 78%;
+    left: 70%;
+    right: 0%;
+    bottom: 6.5%;
+
+    width: 30%;
+    float: left;
+    padding: 10px;
+    color: white;
+    background-color: #5e4b3c;
+
+}
+
+.checkout_div {
+
+    position: absolute;
+    top: 93.5%;
+    left: 70%;
+    right: 0%;
+    bottom: 0%;
+    padding:5px;
+    width: 30%;
+    float: left;
+    vertical-align: middle;		
+    text-align:center;
+
+}
+
+.checkout_button {
+
+color:white;
+background-color: black;
+height: 2em;
+width: 100%;
+padding: 0pt;
+
+border-radius: 12px;
+}
+
+.menu_scroll_button {
+
+color:white;
+background-color: black;
+height: 2em;
+width: 16%;
+padding: 0pt;
+
+border-radius: 12px;
+
+}
+
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
+}
+
+
+.checkout_button:hover {
+
+color:black;
+
+}
+
+
+.order_button {
+
+    float: right;
+
+}
+
+.btn {
+
+    border: none;
+    color: #ddc966;
+    background-color: #5e4b3c;
+
+}
+
+.btn:hover {
+
+    color: white;
+    background-color: #ddc966;
+
+}
+
+button {
+
+    border: none;
+    color: #ddc966;
+    background-color: #5e4b3c;
+
+}
+
+button:hover {
+
+    color: white;
+    background-color: #ddc966;
+
+}
+
+/* .card-body.item {
+
+  margin-left: 1em;
+  padding: 1em;
+  font-size: 1em;
+
+}
+
+.card-header { 
+
+padding:0;
+
+} 
+
+.btn { 
+
+  font-size: 0.5em;
+}*/
+
+* {
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.columnA {
+    float: left;
+    width: 60%;
+    padding: 10px;
+}
+
+.columnB {
+    float: right;
+    width: 40%;
+    padding: 10px;
+    text-align: right;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.order_table {
+
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 3px;
+
+}

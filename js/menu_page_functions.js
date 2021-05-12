@@ -1,4 +1,4 @@
-var elmnt = document.getElementById("scroll_page_div");
+var elmnt = document.getElementById("menu_master");
 
 $(document).ready(function(){
 
@@ -10,16 +10,20 @@ $(document).ready(function(){
 
 $(elmnt).scroll(function() {
     if ($(this).scrollTop()) {
-        $('#toTop').fadeIn();
+        $('#toTop_menu_master').fadeIn();
     } else {
-        $('#toTop').fadeOut();
+        $('#toTop_menu_master').fadeOut();
     }
 });
 
-$("#toTop").click(function() {
+$("#toTop_menu_master").click(function() {
     //$("html, body").animate({scrollTop: 0}, 800);
     //document.getElementById("scroll_page_div").animate({scrollTop: 0}, 800);
     
   elmnt.scrollTop = 0;
       
  });
+ 
+
+
+

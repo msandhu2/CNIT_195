@@ -119,7 +119,25 @@ function top_nav(nav_element)
 
   //  }
 
+    if (nav_element == 'register')
 
+    {
+
+        return_block +=
+
+            '<li class="nav-item active active-custom custom-hover">\
+              <a class="nav-link nav-link-custom" href="register.html">REGISTER</a>\
+            </li>';
+
+    } else {
+
+        return_block +=
+
+            '<li class="nav-item custom-hover">\
+              <a class="nav-link nav-link-custom" href="register.html">REGISTER</a>\
+            </li>';
+
+    }
 
     if (nav_element == 'location')
 
@@ -144,6 +162,7 @@ function top_nav(nav_element)
              </li>';
 
     }
+
 
 
     return_block +=

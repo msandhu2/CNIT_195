@@ -98,6 +98,7 @@ body{
 
 
 
+
 .homeImage{
     margin-top: 10px;
     margin-bottom: 20px;
@@ -245,10 +246,11 @@ hr{
     color: #fff;
     position: fixed;
     bottom: 10px;
-    right: 5px;
-    display: none;
+    right: 25px;
+    display: none; 
     border-radius: 30px;
 }
+
 
 /* responsive media query start */
 @media (min-width: 991px){
@@ -546,3 +548,6 @@ padding:0;
     border-spacing: 3px;
 
 }
+
+
+

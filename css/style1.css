@@ -69,6 +69,7 @@ body{
     color: #676363;
     background-color:#FFFCF8;
     font-size: 18px;
+    text-align: center;
 
 }
 .home{
@@ -193,6 +194,10 @@ body{
     font-size: 18px;
 }
 
+
+.spec_desc:hover {color:#DDC966}
+
+
 .events h2{
     text-align: center;
     margin-top: 40px;
@@ -204,6 +209,7 @@ body{
     justify-content: space-between;
     font-size: 18px;
     font-weight: 500;
+    
 }
 
 .footer{
@@ -230,6 +236,7 @@ hr{
 .text-blue{
      color: #58B8D9 !important ;
  }
+ 
 .text-yellow{
     color: #DDC966 !important;
 }
@@ -237,6 +244,19 @@ hr{
 
 .btn-yellow{
     background-color: #DDC966  !important;
+        color: black ;
+}
+
+
+.btn-yellowb{
+    background-color: #DDC966  !important;
+        color: white ;
+}
+
+
+.btn-yellowb:hover{
+    background-color: #DDC966  !important;
+        color: black ;
 }
 
 /* toTop button */
@@ -468,14 +488,14 @@ color:black;
 .btn {
 
     border: none;
-    color: #ddc966;
+    color: white;
     background-color: #5e4b3c;
 
 }
 
 .btn:hover {
 
-    color: white;
+    color: black;
     background-color: #ddc966;
 
 }

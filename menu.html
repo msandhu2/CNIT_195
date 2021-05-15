@@ -87,7 +87,16 @@
         </table>
     </div>
     <div class="checkout_div" id="checkout_div">
-        <button class="checkout_button" type="button" onClick="submit_order()">Checkout</button>
+        <button class="stripe_button" type="button" onClick="submit_order()"></button>
+        <script
+            src="https:/checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_51IlG26JCX6EEDeQhDJT8v98W93diwSj0GnHBP7P6TztBcv7eOBBf7GpoXtEDOJlYCDMqCW8J1k2puutBAuwm3AwZ00PK3q5Scs"
+            data-amount=".50"
+            data-name="Coffee Purchase"
+            data-description="Widget"
+            data-image="/img/marketplace.png"
+            data-locale="auto">
+        </script>
     </div>
 
 
